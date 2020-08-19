@@ -1,5 +1,28 @@
-<form #addForm="ngForm" (ngSubmit)="submitPost(addForm)">
-  <input type="text" name="title" placeholder="Post Title" ngModel />
-  <input type="text" name="thought" placeholder="Thoughts" ngModel />
-  <button>Add</button>
-</form>
+<div class="background">
+  <div class="form-container">
+    <button (click)="closeForm()" class="close">
+      <span class="material-icons">
+        cancel
+      </span>
+    </button>
+    <form class="post-form" #addForm="ngForm" (ngSubmit)="submitPost(addForm)">
+      <label for="title">Title</label>
+      <input
+        class="title"
+        type="text"
+        name="title"
+        placeholder="Post Title"
+        ngModel
+      />
+      <label for="thought">Thought</label>
+      <input
+        class="thought"
+        type="text"
+        name="thought"
+        placeholder="Thoughts"
+        ngModel
+      />
+      <button>Add</button>
+    </form>
+  </div>
+</div>

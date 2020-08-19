@@ -1,9 +1,13 @@
 <li>
-  <div>
-    <div>
-      <p>{{ postRef.title }}</p>
-      <p>{{ postRef.thought }}</p>
+  <div class="post-box">
+    <div class="text">
+      <p class="title">{{ postRef.title }}</p>
+      <p class="thought">{{ postRef.thought }}</p>
     </div>
-    <button (click)="deletePost()">X</button>
+    <button class="delete" (click)="deletePost()">
+      <span class="material-icons">
+        remove_circle
+      </span>
+    </button>
   </div>
 </li>

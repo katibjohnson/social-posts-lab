@@ -1,0 +1,40 @@
+.background {
+  z-index: 2;
+  position: relative;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.form-container {
+  background-color: #b1ddea;
+  margin: 5vw 10vw;
+  height: 400px;
+  width: 500px;
+  z-index: 3;
+  position: absolute;
+  border-radius: 10px;
+  display: block;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.title,
+.thought {
+  margin-bottom: 10px;
+}
+
+.thought {
+  padding-bottom: 200px;
+}
+
+.close {
+  outline-style: none;
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 1px;
+  top: 5px;
+}

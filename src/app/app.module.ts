@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SocialPostsComponent } from './social-posts/social-posts.component';
 import { PostComponent } from './post/post.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { PostFormComponent } from './post-form/post-form.component';
     PostComponent,
     PostFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })

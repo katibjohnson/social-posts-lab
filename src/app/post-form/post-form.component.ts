@@ -10,16 +10,17 @@ import { NgForm } from '@angular/forms';
 })
 export class PostFormComponent implements OnInit {
   @Output() submitted = new EventEmitter<Post>();
+  @Output() closed = new EventEmitter<any>();
 
   constructor() {}
 
   submitPost(form: NgForm) {
+    this.submitted.emit(form.value);
+  }
+
+  closeForm() {
     console.log('hi');
-    let newPost: Post = {
-      title: form.value.title,
-      thought: form.value.thought,
-    };
-    this.submitted.emit(newPost);
+    this.closed.emit();
   }
 
   ngOnInit(): void {}

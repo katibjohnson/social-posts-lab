@@ -1,9 +1,19 @@
-<h1>My Thoughts</h1>
-<app-post-form (submitted)="onSubmit($event)"></app-post-form>
-<ul>
-  <app-post
-    *ngFor="let post of posts; index as i"
-    [postRef]="post"
-    (deleted)="onDelete(i)"
-  ></app-post>
-</ul>
+<main class="main">
+  <h1 class="h1">My Thoughts</h1>
+  <button class="new-post btn" (click)="onAddClick()">New Thought</button>
+  <section class="post-section">
+    <app-post-form
+      *ngIf="popupShow === true"
+      (submitted)="onSubmit($event)"
+      (closed)="onCloseClick()"
+    ></app-post-form>
+    <ul class="post-list">
+      <app-post
+        class="app-post"
+        *ngFor="let post of posts; index as i"
+        [postRef]="post"
+        (deleted)="onDelete(i)"
+      ></app-post>
+    </ul>
+  </section>
+</main>

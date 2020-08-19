@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+  font-family: Lemon;
+  src: url(src/fonts/LemonTuesday.otf);
+}
+
+body {
+  background-color: #f3f1f7;
+  font-family: "Quicksand", sans-serif;
+}
+
+button,
+input {
+  font-family: "Quicksand", sans-serif;
+}

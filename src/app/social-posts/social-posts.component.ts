@@ -23,6 +23,8 @@ export class SocialPostsComponent implements OnInit {
     },
   ];
 
+  popupShow: boolean;
+
   constructor() {}
 
   onDelete(index: number) {
@@ -31,6 +33,16 @@ export class SocialPostsComponent implements OnInit {
 
   onSubmit(post: Post) {
     this.posts.unshift(post);
+    this.popupShow = false;
   }
+
+  onAddClick() {
+    this.popupShow = true;
+  }
+
+  onCloseClick() {
+    this.popupShow = false;
+  }
+
   ngOnInit(): void {}
 }
